@@ -28,8 +28,7 @@ export async function filterImageFromURL(inputURL: string): Promise<string> {
   });
 }
 
-//@TODO
-//implement the get image URL
+//@TODO implement the get image URL
 //get filtered image
 export async function getFilteredImage(req: Request, resp: Response) {
 
