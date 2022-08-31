@@ -1,5 +1,6 @@
 import fs from "fs";
 import Jimp = require("jimp");
+import { Request ,Response } from 'express'
 
 // filterImageFromURL
 // helper function to download, filter, and save the filtered image locally
@@ -25,6 +26,11 @@ export async function filterImageFromURL(inputURL: string): Promise<string> {
       reject(error);
     }
   });
+}
+
+//get filtered image
+export async function getFilteredImage(req: Request, resp: Response) {
+  
 }
 
 // deleteLocalFiles

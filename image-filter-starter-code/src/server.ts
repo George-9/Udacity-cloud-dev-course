@@ -1,6 +1,6 @@
 import express from "express";
 import bodyParser from "body-parser";
-import { filterImageFromURL, deleteLocalFiles } from "./util/util";
+import { filterImageFromURL, getFilteredImage,deleteLocalFiles } from "./util/util";
 
 (async () => {
   // Init the Express application
@@ -36,9 +36,7 @@ import { filterImageFromURL, deleteLocalFiles } from "./util/util";
     res.send("try GET /filteredimage?image_url={{}}");
   });
 
-  app.get("/filteredimage", async (req, resp) => {
-    
-  });
+  app.get("/filteredimage", getFilteredImage);
 
   // Start the Server
   app.listen(port, () => {
